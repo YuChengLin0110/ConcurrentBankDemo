@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<confoguration>
+	<!-- appender 設定輸出位置  ConsoleAppender : 輸出到console-->
+	<appender name = "STDOUT" class = "ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>
+				%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	
+	<!-- 可指定某些class 或 package -->
+	<logger name = "com.example" level = "INFO"/>
+	
+	<!-- 全域設定 -->
+	<root level = "INFO">
+	<!-- 選用的appender -->
+		<appender-ref ref = "STDOUT" />
+	</root>
+	
+</confoguration>

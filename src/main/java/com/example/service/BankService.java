@@ -31,7 +31,7 @@ public class BankService {
 			}
 
 		} catch (InterruptedException e) {
-			System.out.println("被中斷");
+			Thread.currentThread().interrupt();
 			return TransferStatus.INTERRUPTED;
 		} finally {
 			unlockAccounts(from, to, fromLocked, toLocked);
